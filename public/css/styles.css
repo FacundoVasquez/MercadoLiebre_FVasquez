@@ -15,6 +15,7 @@ h3{
 p{
     font-size: 12px;
 }
+
 div.top-header{
     padding: 5%;
 }
@@ -50,6 +51,7 @@ header .form .input{
     color: #666;
     padding: 2px;
 }
+
 header .form .submit{
     background-color: #FFF;
     border: 1px solid #000;
@@ -139,6 +141,33 @@ article div.main-article{
     width: 100%;
     border-top: 1px solid #ebebeb;
     padding: 15px;
+}
+
+div.pago{
+    text-align: center;
+}
+
+div.pago i{
+    color: #0044AA;
+    size: 2em;
+}
+
+div.envioGratis{
+    text-align: center;
+}
+
+div.envioGratis i{
+    color: #0044AA;
+    size: 2em;
+}
+
+div.Seguridad{
+    text-align: center;
+}
+
+div.Seguridad i{
+    color: #0044AA;
+    size: 2em;
 }
 
 @media (min-width: 361px){
