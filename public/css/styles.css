@@ -17,6 +17,7 @@ p{
 }
 
 div.top-header{
+    display: flex;
     padding: 5%;
 }
 
@@ -25,12 +26,53 @@ header{
 }
 
 header div.logo{
-    width: 50%;
+    padding: 10px;
+    flex: 50%;
+
 }
 
-header div.logo{
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid white;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: white;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid white;
+    background: white;
+    text-align: center;
+    color: black;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+header div.form{
     padding: 10px;
+    flex: 50%;
 }
+
+header div.compra-cuotas{
+    text-align: center;
+}
+
 header nav{
     font-size: 12px;
 }
@@ -74,7 +116,7 @@ div.burger-menu i{
     border-radius: 5px;
     color: #FFF;
     font-size: 20px;
-    height: 40px;
+    height: 30px;
     margin: 10px 0px 20px 0px;
     padding: 10px;
     width: 40px;
@@ -109,6 +151,18 @@ main{
     margin: 0 auto;
 }
 
+.price-disc{
+    display: flex;    
+}
+
+.price{
+    width: 30%;
+}
+
+.discount{
+    width: 70%;
+}
+
 main section article{
     background-color: #fff;    
     margin: 10px 0px;
@@ -123,15 +177,23 @@ main section article i,
     color: #39b54a;
 }
 
-main section article i{
+main section article .flex-cont{
+    position: absolute;
+    right: 15%;
+    top: -15px;
     font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border: 1px solid #39b54a;
     background-color: #FFF;
     border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 main section h3{
     margin: 20px 0px;
@@ -141,6 +203,7 @@ article div.main-article{
     width: 100%;
     border-top: 1px solid #ebebeb;
     padding: 15px;
+    position: relative;
 }
 
 div.pago{
@@ -170,7 +233,20 @@ div.Seguridad i{
     size: 2em;
 }
 
-@media (min-width: 361px){
+main div.form-register{
+    margin: 5px;
+    padding: 5px;
+    width: 75%;
+}
+
+.button-send,
+.button-clear{
+    background-color: #1259C3;
+    color: white;
+    border-radius: 5%;
+}
+
+@media (max-width: 767px){
     main section article .description{
         display: block;
     }
@@ -178,8 +254,84 @@ div.Seguridad i{
     main section article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
+
+    header div.menu-header{
+        display: none;
+    }
+
+    .form-register2{
+        width: 75%;
+        align-items: center;
+        text-align: center;
+    }
+
 }
 
-@media (min-width: 769px){
+@media (min-width: 768px){
+    div.burger-menu{
+        text-align: center;
+        display: none;
+    }
+
+    div.burger-menu{
+        text-align: center;
+        display: none;
+    }
+
+    header div.menu-header{
+        width: 100vw;
+    }
+
+    div.menu-1st{
+        width: 25%;
+        text-align: left;
+    }
+
+    div.menu-2nd{
+        width: 25%;
+        text-align: right;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    ul{
+        display: flex;
+        flex: 50%;
+        justify-content: space-between;
+    }
+
+    ul li{
+        justify-content:space-around ;
+    }
+
+    .products{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    article{
+        flex: 50%;
+    }
+}
+
+@media (min-width: 1024px){
+    .products{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .products > article{
+        flex: 25%;
+    }
+    
+    footer div.fFlex{
+        display: flex;
+        justify-content: space-between;
+    }
 
 }
